@@ -1,0 +1,25 @@
+From 52b3787d0fe4aa7efd31a1d225d35894235eddd3 Mon Sep 17 00:00:00 2001
+From: George T Kramer <george.t.kramer@intel.com>
+Date: Mon, 21 Oct 2019 19:53:15 -0700
+Subject: [PATCH] Do not test with internet
+
+---
+ tests/selftest.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tests/selftest.c b/tests/selftest.c
+index 78ae43e..ad1b1b4 100644
+--- a/tests/selftest.c
++++ b/tests/selftest.c
+@@ -35,6 +35,8 @@
+ #include <stdio.h>
+ #include <assert.h>
+ 
++#define TEST_WITHOUT_INTERNET 1
++
+ #define TEST(xX) printf ("\nTest %s:%d (%s): ", __FILE__, __LINE__, __FUNCTION__); \
+   printf xX; \
+   printf ("\n")
+-- 
+2.23.0
+
